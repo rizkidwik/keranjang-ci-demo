@@ -65,7 +65,7 @@ export default function App() {
                       min={0}
                       aria-label={`Jumlah ${p.nama}`}
                       value={jumlah}
-                      onChange={(e) => ubahQty(p.id, e.target.value)}
+                      onChange={(e) => ubahQty(p.id, Number(e.target.value) || 0)}
                     />
                     <button
                       type="button"
