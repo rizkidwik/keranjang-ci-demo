@@ -60,7 +60,13 @@ export default function App() {
                     >
                       −
                     </button>
-                    <span aria-live="polite">{jumlah}</span>
+                    <input
+                      type="number"
+                      min={0}
+                      aria-label={`Jumlah ${p.nama}`}
+                      value={jumlah}
+                      onChange={(e) => ubahQty(p.id, e.target.value)}
+                    />
                     <button
                       type="button"
                       aria-label={`Tambah ${p.nama}`}
