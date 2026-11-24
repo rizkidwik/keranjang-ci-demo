@@ -56,9 +56,7 @@ export function hitungDiskon(
   }
 
   if (voucher.tipe === 'persen') {
-    const diskon = Math.floor((belanja * voucher.persen) / 100)
-    // batas maksimal diskon, supaya promo persen tidak merugikan toko
-    return { diskon: Math.min(diskon, voucher.maksDiskon) }
+    return { diskon: Math.floor((belanja * voucher.persen) / 100) }
   }
 
   // potongan tetap tidak boleh melebihi belanja, total tidak boleh negatif
