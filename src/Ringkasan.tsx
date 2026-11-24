@@ -7,11 +7,11 @@ interface Props {
 }
 
 export function Ringkasan({ items, voucher }: Props) {
+  const hasil = useMemo(() => ringkasan(items, voucher), [items, voucher])
+
   if (items.length === 0) {
     return <p className="kosong">Keranjang masih kosong.</p>
   }
-
-  const hasil = useMemo(() => ringkasan(items, voucher), [items, voucher])
 
   return (
     <>
