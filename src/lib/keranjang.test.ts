@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { VOUCHER } from '../data.ts'
 import {
   cariVoucher,
   formatRupiah,
@@ -100,6 +101,13 @@ describe('invarian', () => {
         expect(hasil.total).toBeLessThanOrEqual(hasil.subtotal)
       }
     }
+  })
+})
+
+describe('voucher BARU25 untuk pelanggan baru', () => {
+  it('memberi 25% untuk belanja 100.000', () => {
+    const baru25 = cariVoucher('BARU25', VOUCHER)
+    expect(hitungDiskon(100000, baru25).diskon).toBe(25000)
   })
 })
 

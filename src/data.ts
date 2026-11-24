@@ -17,4 +17,5 @@ export const PRODUK: Produk[] = [
 export const VOUCHER: Voucher[] = [
   { kode: 'HEMAT50', tipe: 'persen', persen: 50, maksDiskon: 25000, minBelanja: 40000 },
   { kode: 'POTONG10', tipe: 'potongan', nilai: 10000, minBelanja: 30000 },
+  { kode: 'BARU25', tipe: 'persen', persen: 25, maksDiskon: 20000, minBelanja: 50000 },
 ]
